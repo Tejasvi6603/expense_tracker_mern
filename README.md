@@ -41,7 +41,111 @@ Before starting, make sure you have installed:
 
     Implement Mongoose ORM for schema definition and validation.
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Tejasvi6603/expense_tracker_mern.git
+```
+
+Go to the project directory
+
+```bash
+  cd expense_tracker_mern
+```
+
+Go to the frontend directory and Install dependencies
+
+```bash
+  cd frontend
+```
+```bash
+  npm install
+```
+
+Go to the backend directory and Install dependencies
+
+```bash
+  cd backend
+```
+```bash
+  npm install
+```
+
+Start the frontend server
+
+```bash
+  npm start
+```
 
 
+Start the backend server
+
+```bash
+  npm run dev
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file in backend folder
+
+create config folder and add config.env file in it and all all env variables there.
+
+`MONGO_URL` : Your MongoDB Connection String
+
+`PORT`: PORT number
+
+## Docker Setup
+
+Build and start containers
+```bash
+   docker-compose up --build
+```
+
+Access services
+Frontend: http://localhost:3000
+Backend API: http://localhost:5000
+MongoDB: Accessible via Compass at mongodb://localhost:YOUR_MONGODB_ADDRESS
+
+Stop containers
+```bash
+    docker-compose down
+```
+
+##  API Endpoints 
+
+### Authentication
+| Method | Endpoint                  | Description                  | Body Params |
+|--------|---------------------------|------------------------------|-------------|
+| POST   | `/api/auth/register`       | Register new user            | `{ name, email, password }` |
+| POST   | `/api/auth/login`          | Login and receive JWT token  | `{ email, password }` |
+| POST   | `/api/auth/setAvatar`      | Set user avatar image        | `{ avatarImage, userId }` |
+
+---
+
+### Transactions
+| Method | Endpoint                        | Description                 | Body Params |
+|--------|---------------------------------|-----------------------------|-------------|
+| POST   | `/api/v1/addTransaction`         | Add a new transaction       | `{ amount, type, category, date, description }` |
+| GET    | `/api/v1/getTransaction`         | Retrieve all transactions   | *Query params:* `month`, `year` *(optional)* |
+| PUT    | `/api/v1/updateTransaction`      | Update an existing transaction | `{ id, amount, type, category, date, description }` |
+| DELETE | `/api/v1/deleteTransaction`      | Delete a transaction        | `{ id }` |
+
+
+## Sample data 
+
+Example of a single expense transaction:
+
+```json
+{
+  "title": "Grocery Shopping",
+  "amount": 120,
+  "description": "Weekly groceries from the supermarket",
+  "category": "Food",
+  "date": "2025-01-05",
+  "transactionType": "expense"
+}
+```
 
 
