@@ -4,7 +4,7 @@
 The Expense Tracker is a full-stack application that helps users track income and expenses, categorize transactions, and view analytics for better financial management.
 
 ## Key Features
-- **User Authentication** — Sign-up/Login with JWT-based authorization
+- **User Authentication** — Sign-up and Login
 - **Transaction Management** — Add, edit, delete, and view transactions
 - **Categorization** — Assign transactions to predefined or custom categories
 - **Date Filtering** — View transactions for specific months or date ranges
