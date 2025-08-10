@@ -8,7 +8,7 @@ import morgan from "morgan";
 import transactionRoutes from "./Routers/Transactions.js";
 import userRoutes from "./Routers/userRouter.js";
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./.env" });
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,8 +19,6 @@ connectDB();
 // Allowed Origins
 const allowedOrigins = [
   "http://localhost:3000", // React frontend
-  // "https://main.d1sj7cd70hlter.amplifyapp.com",
-  // "https://expense-tracker-app-three-beryl.vercel.app",
 ];
 
 // Middlewares
