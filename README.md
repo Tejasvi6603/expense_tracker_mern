@@ -33,7 +33,7 @@ Before starting, make sure you have installed:
 
     Use Node.js and Express.js to build a RESTful API for handling client requests and serving as the application's backend.
 
-    Implement authentication and authorization using JSON Web Tokens (JWT) and middleware to protect endpoints.
+    Implement authentication and authorization using middleware to protect endpoints.
 
 - Database:
 
